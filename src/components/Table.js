@@ -2,14 +2,12 @@ import React, { Component } from 'react'
 export default class Table extends Component {
 
     render() {
-
         let nameInfo = this.props.nameInfo,
             searchTerms = this.props.searchTerms.trim().toLowerCase();
         if (searchTerms.length > 0) {
             nameInfo = nameInfo.filter((i) => {
                 return i.name.toLowerCase().match(searchTerms);
             });
-            // nameInfo = this.state.data.filter(i => i.name.toLowerCase() === searchTerms)
         }
         return (
 
